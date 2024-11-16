@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelompok 3</title>
+  <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGES -->
+ 
+<section class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Daftar</h1>
+			<input type="text" id="usernameSignUp" placeholder="Nama"  required/>
+			<input type="email" id="emailSignUp" placeholder="Email" required />
+			<input type="text" id="addressSignUp" placeholder="Alamat" required/>
+			<input type="password" id="passwordSignUp" placeholder="Password" required/>
+			<button>Daftar</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Masuk</h1>
+			<input type="email" placeholder="Email" id="emailLogin"/>
+			<input type="password" placeholder="Password" id="passwordLogin"/>
+			<a href="#">Lupa Password ?</a>
+			<button>Masuk</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Selamat Datang</h1>
+				<p>Untuk tetap berbelanja dengan kami, silakan masuk dengan akun anda</p>
+				<button class="ghost" id="signIn">Masuk</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hi !</h1>
+				<p>Daftarkan diri Anda dan mulailah pengalaman berbelanja dengan kami</p>
+				<button class="ghost" id="signUp">Daftar</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- LOGIN PAGES SELESAI -->
+
+<script type="module" src="login_script.js"></script>
+</body>
+</html>

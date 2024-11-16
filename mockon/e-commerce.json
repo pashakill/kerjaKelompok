@@ -1,0 +1,261 @@
+{
+  "uuid": "97d09404-b462-4bc9-b125-5747043f0e8b",
+  "lastMigration": 28,
+  "name": "E commerce",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3004,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "6da23cb3-3759-455a-8687-ab03e1c7b193",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "0f93a6cb-74cf-4a3a-aae4-fd1efbf719ac",
+          "body": "{\n  \"nama\": \"John Dee\",\n  \"no_hp\": \"08121322111\",\n  \"alamat\": \"Pamulang barat no.32\",\n  \"success\": true,\n  \"erorr\": \"Email atau password salah\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{\"email\":\"admin@gmail.com\",\"password\":\"admin\"}",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "0a213908-c49f-43db-b0aa-3491544f7f84",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "5dc6fea4-a5a1-4abf-a856-defa8cd9254e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "intro",
+      "responses": [
+        {
+          "uuid": "c2f0de7b-5801-4858-ad5e-655251c08f22",
+          "body": "{\n    \"success\": true,\n    \"intro\": [\n        {\n            \"title\": \"Stylish shoes for Women\",\n            \"productName\": \"Nike Jordan\",\n            \"productDescription\": \"Nike Jordan adalah\",\n            \"image\": \"images/card-item1.jpg\",\n            \"price\": 100000,\n            \"colour\": \"Black\",\n            \"code\": \"AO2121\",\n            \"link\": \"index.html\"\n        },\n        {\n            \"title\": \"Sports Wear\",\n            \"productName\": \"Michael Jordan\",\n            \"productDescription\": \"Nike Jordan adalah\",\n            \"image\": \"images/card-image2.jpg\",\n            \"price\": 100000,\n            \"code\": \"Z1G122\",\n            \"colour\": \"Black, Red, White\",\n            \"link\": \"index.html\"\n        },\n        {\n            \"title\": \"Stylish shoes for Women\",\n            \"productName\": \"Running Shoes\",\n            \"productDescription\": \"Nike Jordan adalah\",\n            \"image\": \"images/card-image1.jpg\",\n            \"price\": 100000,\n            \"code\": \"H12122\",\n            \"colour\": \"Red\",\n            \"link\": \"index.html\"\n        },\n        {\n            \"title\": \"Sports Wear\",\n            \"productName\": \"Shoes Running\",\n            \"productDescription\": \"Nike Jordan adalah\",\n            \"image\": \"images/card-item2.jpg\",\n            \"price\": 100000,\n            \"colour\": \"White\",\n            \"code\": \"SAG2122\",\n            \"link\": \"index.html\"\n        }\n    ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "f62bef64-bedf-49c7-8f85-1362fae0f1e2",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "feature",
+      "responses": [
+        {
+          "uuid": "3929933c-16c1-4a01-938a-b0a1da8990d2",
+          "body": "{\n  \"success\": true,\n  \"feature\": [\n      {\n          \"title\": \"Stylish shoes for Women\",\n          \"image\": \"images/card-item1.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      },\n      {\n          \"title\": \"Sports Wear\",\n          \"image\": \"images/card-item2.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      },\n      {\n          \"title\": \"Sports Wear\",\n          \"image\": \"images/card-item4.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      },\n      {\n          \"title\": \"Stylish shoes for Women\",\n          \"image\": \"images/card-item5.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      },\n      {\n          \"title\": \"Sports Wear\",\n          \"image\": \"images/card-item6.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "940cc09a-aefc-4d8a-ab63-699e75eb5d4c",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "d757767d-e061-4783-8a8d-34c1152f557a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "nw5s",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "957a208e-0f60-43f0-83d8-bfc87b6d6f76",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "latestProduct",
+      "responses": [
+        {
+          "uuid": "e368f11e-8b0d-4596-8135-b9ac6fe46915",
+          "body": "{\n  \"success\": true,\n  \"latest\": [\n      {\n          \"title\": \"Stylish shoes for Women\",\n          \"image\": \"images/card-item6.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      },\n      {\n          \"title\": \"Sports Wear\",\n          \"image\": \"images/card-item7.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      },\n      {\n          \"title\": \"Sports Wear\",\n          \"image\": \"images/card-item8.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n      },\n      {\n          \"title\": \"Stylish shoes for Women\",\n          \"image\": \"images/card-item9.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n        \n      },\n      {\n          \"title\": \"Sports Wear\",\n          \"image\": \"images/card-item10.jpg\",\n          \"link\": \"index.html\",\n          \"price\": 100.000\n\n      }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "6da23cb3-3759-455a-8687-ab03e1c7b193"
+    },
+    {
+      "type": "route",
+      "uuid": "5dc6fea4-a5a1-4abf-a856-defa8cd9254e"
+    },
+    {
+      "type": "route",
+      "uuid": "f62bef64-bedf-49c7-8f85-1362fae0f1e2"
+    },
+    {
+      "type": "route",
+      "uuid": "940cc09a-aefc-4d8a-ab63-699e75eb5d4c"
+    },
+    {
+      "type": "route",
+      "uuid": "957a208e-0f60-43f0-83d8-bfc87b6d6f76"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin"
+    },
+    {
+      "key": "Accept,Authorization,Content-Length",
+      "value": "X-Requested-With"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "d5d3c3f6-0c1b-4063-ba75-3d4a6a40b158",
+      "id": "nw5s",
+      "name": "user",
+      "documentation": "",
+      "value": "[\n  { \"id\": 1, \"name\": \"Gudrun Rempel\", \"email\": \"test@gmail.com\" },\n  { \"id\": 2, \"name\": \"Roberta Conroy\", \"email\": \"test2@gmail.com\" },\n  { \"id\": 3, \"name\": \"Tia Armstrong\", \"email\": \"test3.com\" }\n]"
+    }
+  ]
+}
