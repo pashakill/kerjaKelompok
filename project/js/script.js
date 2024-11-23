@@ -343,7 +343,7 @@ window.addEventListener('load', () => {
       loginLink.textContent = 'Login';
       // Optionally, add a login click handler to navigate to the login page
       loginLink.addEventListener('click', () => {
-        window.location.href = "../login/login.html";
+        window.location.href = "login.html";
       });
   }
 });
