@@ -88,4 +88,26 @@ export async function initFeature() {
          throw error;
      }
  }
+
+ export async function getAdds() {
+    try {
+         const response = await fetch(API_URL + "/adds", {
+             method: 'GET',
+             headers: {
+                 'Content-Type': 'application/json'
+             }
+         });
+         
+         // Jika respons gagal
+         if (!response.ok) {
+             throw new Error("Failed to fetch data");
+         }
+ 
+         // Mengembalikan data JSON dari API
+         return await response.json();
+     } catch (error) {
+         console.error("Error during fetch:", error);
+         throw error;
+     }
+ }
  
