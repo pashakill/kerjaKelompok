@@ -47,7 +47,7 @@ loginButton.addEventListener('click', async (event) => {
         // Retrieve users from localStorage
         const users = JSON.parse(localStorage.getItem('users')) || [];
         // Kirim data ke backend menggunakan fetch API
-        const response = await fetch("http://localhost/project/login/login.php", {
+        const response = await fetch("http://localhost/project/login.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password }),
@@ -63,7 +63,7 @@ loginButton.addEventListener('click', async (event) => {
             // Save user data in localStorage and mark them as logged in
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('loggedInUser', JSON.stringify(user));  // Optionally store user data            
-            window.location.href = "../index.html"; 
+            window.location.href = "index.html"; 
         } else {
             alert("Incorrect email or password.");
         }
@@ -103,7 +103,7 @@ registerButton.addEventListener('click', (event) => {
         // Show success message
         alert("Registration successful!");
         // Optionally, redirect user to login page after registration
-        window.location.href = "../index.html"; // Assuming login page
+        window.location.href = "index.html"; // Assuming login page
     }catch{
         console.error('Register failed:', error);
         alert("Login failed. Please try again.");
