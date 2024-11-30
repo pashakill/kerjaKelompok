@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async function() {
   const gridContainer = document.getElementById("grid-container");
   const data = await initIntro();
 
-  const modal = new bootstrap.Modal(document.getElementById("modaltoggle")); // Bootstrap modal instance
+  const modal = new bootstrap.Modal(document.getElementById("modaltoggle")); 
 
   if (data.success && Array.isArray(data.intro)) {
     // Loop untuk menambahkan gambar ke dalam grid
@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded", async function() {
       const img = document.createElement("img");
       img.src = item.image;
       img.alt = item.title;
-      img.setAttribute("data-bs-target", "#modaltoggle"); // Set modal target
-      img.setAttribute("data-bs-toggle", "modal"); // Enable modal toggle
+      img.setAttribute("data-bs-target", "#modaltoggle"); 
+      img.setAttribute("data-bs-toggle", "modal"); 
 
       // Add image to the container and container to the grid
       imgContainer.appendChild(img);
@@ -210,7 +210,7 @@ window.addEventListener('load', () => {
       loginLink.textContent = 'Login';
       // Optionally, add a login click handler to navigate to the login page
       loginLink.addEventListener('click', () => {
-        window.location.href = "login.html";
+        window.location.href = "login/login.html";
       });
   }
 });

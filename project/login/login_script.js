@@ -46,24 +46,13 @@ loginButton.addEventListener('click', async (event) => {
     try{
         // Retrieve users from localStorage
         const users = JSON.parse(localStorage.getItem('users')) || [];
-        // Kirim data ke backend menggunakan fetch API
-        const response = await fetch("http://localhost/project/login.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password }),
-        });
-        console.log(response);
-
-        // Ambil hasil dari backend
-        const result = await response.json();
-        
         // Check if the user exists and the password matches
-        //const user = users.find(user => user.email === username && user.password === password);
-        if (response.status == 200) {
+        const user = users.find(user => user.email === username && user.password === password);
+        if (user) {
             // Save user data in localStorage and mark them as logged in
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('loggedInUser', JSON.stringify(user));  // Optionally store user data            
-            window.location.href = "index.html"; 
+            window.location.href = "../index.html"; 
         } else {
             alert("Incorrect email or password.");
         }
